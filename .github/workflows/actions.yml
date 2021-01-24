@@ -15,6 +15,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Emby Install
         run: |
-          apt-get -yqq update; apt-get -yqq upgrade; apt-get -yqq install git lsb-release bc; \
+          sudo apt-get -yqq update; sudo apt-get -yqq upgrade; sudo apt-get -yqq install git lsb-release bc; \
           git clone https://github.com/QuickBox/QB /etc/QuickBox; \
           sudo sh /etc/QuickBox/setup/quickbox-setup
