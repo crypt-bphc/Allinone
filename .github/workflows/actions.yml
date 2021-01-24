@@ -16,6 +16,4 @@ jobs:
       - name: Emby Install
         run: |
           curl https://rclone.org/install.sh | sudo bash
-          curl https://raw.githubusercontent.com/liaralabs/swizzin/master/setup.sh
-          sudo chmod +x setup.sh
-          sudo ./setup.sh
+          sudo -H su -c 'bash <(wget -qO - git.io/swizzin) && . ~/.bashrc'
