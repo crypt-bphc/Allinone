@@ -90,6 +90,7 @@ function _preparation() {
         echo_info "That directory is relative to your pwd  = $(pwd)/$RelativeScriptPath"
         echo_warn "Best of luck and please follow the contribution guidelines cheerio"
     fi
+    echo "Checkpoint 1"
     ln -s /etc/swizzin/scripts/ /usr/local/bin/swizzin
     chmod -R 700 /etc/swizzin/scripts
     echo " ##### Switching logs to /root/logs/swizzin.log  ##### " >> "$log"
