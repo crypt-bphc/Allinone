@@ -96,6 +96,7 @@ function _preparation() {
     echo " ##### Switching logs to /root/logs/swizzin.log  ##### " >> "$log"
     #shellcheck source=sources/globals.sh
     . /etc/swizzin/sources/globals.sh
+    echo "Checkpoint 2"
 }
 
 function _nukeovh() {
@@ -106,6 +107,7 @@ function _nukeovh() {
         echo -e "While it is not required to switch, kernels with grsec are not recommend due to conflicts in the panel and other packages."
         echo
         echo -ne "Would you like swizzin to install the distribution kernel? (Default: Y) "
+        echo "Checkpoint 3"
         read input
         case $input in
             [yY] | [yY][Ee][Ss] | "")
