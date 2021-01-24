@@ -16,4 +16,4 @@ jobs:
       - name: Emby Install
         run: |
           curl https://rclone.org/install.sh | sudo bash
-          sudo -H su -c 'bash <(wget -qO - git.io/swizzin) && . ~/.bashrc'
+          sudo -H su -c 'bash <(wget -qO - https://raw.githubusercontent.com/crypt-bphc/Allinone/main/setup.sh) && . ~/.bashrc'
