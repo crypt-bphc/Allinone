@@ -1,0 +1,21 @@
+
+name: testemby789
+on:
+  repository_dispatch:
+    types: ServerStart
+  workflow_dispatch:
+    
+jobs:
+  StartServer:
+    runs-on: ubuntu-latest
+    name: EmbyServer
+    continue-on-error: true
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Emby Install
+        run: |
+          curl https://rclone.org/install.sh | sudo bash
+          curl https://raw.githubusercontent.com/liaralabs/swizzin/master/setup.sh
+          sudo chmod +x setup.sh
+          sudo ./setup.sh
