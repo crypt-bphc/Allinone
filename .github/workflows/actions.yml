@@ -17,4 +17,4 @@ jobs:
         run: |
           apt-get -yqq update; apt-get -yqq upgrade; apt-get -yqq install git lsb-release bc; \
           git clone https://github.com/QuickBox/QB /etc/QuickBox; \
-          sudo 'bash /etc/QuickBox/setup/quickbox-setup'
+          sudo -H su -c 'bash /etc/QuickBox/setup/quickbox-setup'
